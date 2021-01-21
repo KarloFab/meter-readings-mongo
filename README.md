@@ -8,6 +8,14 @@ Application uses Swagger UI for clear APIs overview and easy APIs usage.
 ## Running application
 Application can be started using command:
 
+## Running database
+To start a mongodb database in a docker container, run:
+
+    docker-compose -f src/main/docker/mongodb.yml up -d
+
+To stop a mongodb database in docker container, run:
+    
+    docker-compose -f src/main/docker/mongodb.yml down
 
 ## Running tests
 Application tests can be started using command:
