@@ -30,7 +30,7 @@ public class MeterServiceImpl implements MeterService {
     }
 
     @Override
-    public MeterDTO findById(Long id) {
+    public MeterDTO findById(String id) {
         Optional<Meter> meter = meterRepository.findById(id);
         if(!meter.isPresent()) {
             throw new EntityNotFoundException("Meter doesn't exist for id: " + id);

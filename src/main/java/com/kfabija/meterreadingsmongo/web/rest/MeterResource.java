@@ -30,7 +30,7 @@ public class MeterResource {
 
 
     @GetMapping("/meters/{id}")
-    public MeterDTO getMeterReadings(@PathVariable Long id) {
+    public MeterDTO getMeterReadings(@PathVariable String id) {
         log.debug("REST request to get Meter by id: " + id);
         return meterService.findById(id);
     }

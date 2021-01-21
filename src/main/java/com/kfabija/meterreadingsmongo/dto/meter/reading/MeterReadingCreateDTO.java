@@ -11,7 +11,7 @@ public class MeterReadingCreateDTO implements Serializable {
     private Month month;
 
     @NotNull
-    private Long meterId;
+    private String meterId;
 
     private Double electricityConsumption;
 
@@ -39,11 +39,11 @@ public class MeterReadingCreateDTO implements Serializable {
         this.electricityConsumption = electricityConsumption;
     }
 
-    public Long getMeterId() {
+    public String getMeterId() {
         return meterId;
     }
 
-    public void setMeterId(Long meterId) {
+    public void setMeterId(String meterId) {
         this.meterId = meterId;
     }
 }

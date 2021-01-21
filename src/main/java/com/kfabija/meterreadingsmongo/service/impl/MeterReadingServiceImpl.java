@@ -11,9 +11,9 @@ import com.kfabija.meterreadingsmongo.repository.MeterRepository;
 import com.kfabija.meterreadingsmongo.service.MeterReadingService;
 import com.kfabija.meterreadingsmongo.service.mapper.MeterReadingMapper;
 import com.kfabija.meterreadingsmongo.web.rest.errors.EntityExistsException;
+import com.kfabija.meterreadingsmongo.web.rest.errors.EntityNotFoundException;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.EntityNotFoundException;
 import java.util.*;
 
 import static java.util.Objects.isNull;
@@ -123,7 +123,7 @@ public class MeterReadingServiceImpl implements MeterReadingService {
         return meterReadings;
     }
 
-    private Meter getMeterByIdIfExists(Long meterId) {
+    private Meter getMeterByIdIfExists(String meterId) {
         Optional<Meter> meter = meterRepository.findById(meterId);
         if (!meter.isPresent()) {
             throw new EntityNotFoundException("Meter doesn't exists for id: " + meterId);

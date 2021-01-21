@@ -8,5 +8,5 @@ public interface MeterService {
 
     List<MeterDTO> findAll();
 
-    MeterDTO findById(Long id);
+    MeterDTO findById(String id);
 }
