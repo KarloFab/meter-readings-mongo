@@ -1,32 +1,22 @@
 package com.kfabija.meterreadingsmongo.domain;
 
-import javax.persistence.*;
+import org.springframework.data.annotation.Id;
+
 import java.util.List;
 
-@Entity
-@Table(name = "meter")
 public class Meter {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
-    @SequenceGenerator(name = "sequenceGenerator")
-    private Long id;
-
-    @Column(name = "model")
+    private String id;
     private String model;
-
-    @OneToOne
-    @JoinColumn(unique = true)
     private Client client;
-
-    @OneToMany(mappedBy = "meter")
     private List<MeterReading> meterReadings;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

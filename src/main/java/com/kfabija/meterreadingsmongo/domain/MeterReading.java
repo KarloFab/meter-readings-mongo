@@ -1,38 +1,23 @@
 package com.kfabija.meterreadingsmongo.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.kfabija.meterreadingsmongo.enumeration.Month;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name = "meter_reading")
 public class MeterReading {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
-    @SequenceGenerator(name = "sequenceGenerator")
-    private Long id;
-
-    @Column(name = "year")
+    private String id;
     private Integer year;
-
-    @Enumerated(EnumType.STRING)
-    @Column(name = "month")
     private Month month;
-
-    @Column(name = "electricity_consumption")
     private Double electricityConsumption;
-
-    @ManyToOne
-    @JsonIgnoreProperties("meterReadings")
     private Meter meter;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
