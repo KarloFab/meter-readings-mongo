@@ -44,5 +44,4 @@ public class MeterReadingResource {
         MeterReadingDTO meterReadingDTO = meterReadingService.save(meterReadingCreateDTO);
         return ResponseEntity.status(HttpStatus.CREATED).body(meterReadingDTO);
     }
-
 }

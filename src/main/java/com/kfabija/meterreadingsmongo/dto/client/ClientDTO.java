@@ -4,17 +4,17 @@ import com.kfabija.meterreadingsmongo.dto.AddressDTO;
 import com.kfabija.meterreadingsmongo.dto.meter.MeterCreateDTO;
 
 public class ClientDTO {
-    private Long id;
+    private String id;
     private String firstName;
     private String lastName;
     private AddressDTO address;
     private MeterCreateDTO meter;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
