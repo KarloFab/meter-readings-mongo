@@ -1,0 +1,6 @@
+version: '2'
+services:
+  mgtest-mongodb:
+    image: mongo:4.0.13
+    ports:
+      - '27017:27017'
