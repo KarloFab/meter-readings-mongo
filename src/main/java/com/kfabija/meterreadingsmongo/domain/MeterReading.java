@@ -1,8 +1,7 @@
 package com.kfabija.meterreadingsmongo.domain;
 
 import com.kfabija.meterreadingsmongo.enumeration.Month;
-
-import javax.persistence.*;
+import org.springframework.data.annotation.Id;
 
 public class MeterReading {
 
