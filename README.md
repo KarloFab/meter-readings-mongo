@@ -1,6 +1,5 @@
 # Meter Readings Mongo DB
-This application was developed as a purpose of getting familiar with concepts
-of MongoDB and Gradle.
+This application was developed as a purpose of getting familiar with concepts of MongoDB and Gradle.
 It uses some code and features from meter-readings project I have developed earlier. 
 It provides APIs for retrieving Meter Readings as well as inserting Meter Readings.
 Application uses Swagger UI for clear APIs overview and easy APIs usage. 
