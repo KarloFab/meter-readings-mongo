@@ -14,9 +14,10 @@ public class DatabaseConfiguration {
     public MongockSpring5.MongockInitializingBeanRunner mongockInitializingBeanRunner(
             ApplicationContext springContext,
             MongoTemplate mongoTemplate){
+
         return MongockSpring5.builder()
                 .setDriver(SpringDataMongo3Driver.withDefaultLock(mongoTemplate))
-                .addChangeLogsScanPackage("your_changeLog_package_path")
+                .addChangeLogsScanPackage("com.kfabija.meterreadingsmongo.config.dbmigrations")
                 .setSpringContext(springContext)
                 .buildInitializingBeanRunner();
     }
